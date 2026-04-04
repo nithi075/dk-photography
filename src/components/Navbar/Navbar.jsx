@@ -21,7 +21,7 @@ export default function Navbar(){
     <nav className={`nav ${scrolled ? "nav-scroll" : ""}`}>
 
       <h2 className="logo">
-        MV Photography Trichy
+        MV Photography
       </h2>
 
       {/* desktop links */}
@@ -29,7 +29,7 @@ export default function Navbar(){
 
         <a href="#hero">Home</a>
         <a href="#about">About</a>
-        <a href="#work">Work</a>
+        <a href="#work">Portfolio</a>
         <a href="#contact">Contact</a>
 
       </div>
@@ -54,7 +54,7 @@ export default function Navbar(){
 
         <a href="#hero" onClick={()=>setMenuOpen(false)}>Home</a>
         <a href="#about" onClick={()=>setMenuOpen(false)}>About</a>
-        <a href="#work" onClick={()=>setMenuOpen(false)}>Work</a>
+        <a href="#work" onClick={()=>setMenuOpen(false)}>Portfolio</a>
         <a href="#contact" onClick={()=>setMenuOpen(false)}>Contact</a>
 
       </div>
