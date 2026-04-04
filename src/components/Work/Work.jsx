@@ -15,16 +15,16 @@ import cinematicImg from "../../assets/cinematic.jpeg";
 
 export default function Work() {
   const portfolio = [
-    { src: weddingImg, category: "Wedding", className: "img1" },
-    { src: candidImg, category: "Couple", className: "img4" },
-    { src: portraitImg, category: "Portrait", className: "img3" },
-    { src: coupleImg, category: "Candid", className: "img2" },
-    { src: wedding2Img, category: "Engagement", className: "img5" },
-    { src: engagementImg, category: "Wedding", className: "img6" },
-    { src: receptionImg, category: "Reception", className: "img7" },
-    { src: brideImg, category: "Bride", className: "img8" },
-    { src: traditionalImg, category: "Traditional", className: "img9" },
-    { src: cinematicImg, category: "Cinematic", className: "img10" },
+    { src: weddingImg, className: "img1" },
+    { src: candidImg, className: "img4" },
+    { src: portraitImg, className: "img3" },
+    { src: coupleImg, className: "img2" },
+    { src: wedding2Img, className: "img5" },
+    { src: engagementImg, className: "img6" },
+    { src: receptionImg, className: "img7" },
+    { src: brideImg, className: "img8" },
+    { src: traditionalImg, className: "img9" },
+    { src: cinematicImg, className: "img10" },
   ];
 
   return (

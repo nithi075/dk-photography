@@ -3,26 +3,31 @@ import heroImage from "../../assets/hero.jpeg";
 
 export default function Hero(){
 
-  const whatsappNumber = "919876543210"; // 91 + your number
-  const message = "Hello, I would like to book a photography session.";
-  
+  const whatsappNumber = "919876543210"; // replace with your number
+
+  const message =
+  "Hello MV Photography, I would like to book a luxury photography session. Please share details.";
+
   const whatsappLink =
-    `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+  `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
   return(
     <section className="hero">
 
       <img
         src={heroImage}
-        alt="MV Photography Hero - Wedding"
+        alt="MV Photography Luxury Hero"
         className="hero-img"
       />
 
       <div className="hero-overlay">
 
-        <h1>Capturing Moments That Last Forever</h1>
+        <h1>Timeless Luxury Photography</h1>
 
-        <p>Wedding • Portrait • Cinematic Shoots</p>
+        <p>
+          Capturing elegance, emotion, and beauty in every frame.
+          Wedding • Pre-Wedding • Portrait • Cinematic Films
+        </p>
 
         <a
           href={whatsappLink}
@@ -30,7 +35,7 @@ export default function Hero(){
           rel="noopener noreferrer"
           className="hero-btn"
         >
-          Book Now
+          Reserve Your Date
         </a>
 
       </div>

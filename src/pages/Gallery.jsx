@@ -17,7 +17,6 @@ export default function Gallery() {
     {
       title: "Wedding Photography",
       img: wedding,
-      category: "Wedding"
     },
     {
       title: "Signature Wedding",
