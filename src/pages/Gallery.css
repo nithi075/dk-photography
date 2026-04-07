@@ -65,7 +65,7 @@
   align-items: center;
   gap: 20px;
   padding: 18px 45px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255,255,255,0.1);
   color: #fff;
   text-decoration: none;
   font-family: 'Plus Jakarta Sans';
@@ -91,7 +91,7 @@
   transform: translateX(10px);
 }
 
-/* --- MASONRY GRID --- */
+/* --- DESKTOP GRID --- */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -105,24 +105,28 @@
   position: relative;
   overflow: hidden;
   background: #111;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 
-/* Logic for dynamic sizes */
 .featured {
   grid-row: span 2;
   grid-column: span 2;
 }
 
 @media (min-width: 1024px) {
-  .gallery-item:nth-child(3n) { grid-row: span 2; }
-  .gallery-item:nth-child(5n) { grid-column: span 2; }
+  .gallery-item:nth-child(3n) {
+    grid-row: span 2;
+  }
+
+  .gallery-item:nth-child(5n) {
+    grid-column: span 2;
+  }
 }
 
+/* image */
 .gallery-image-box {
   width: 100%;
   height: 100%;
-  position: relative;
 }
 
 .gallery-image-box img {
@@ -130,25 +134,26 @@
   height: 100%;
   object-fit: cover;
   filter: grayscale(30%);
-  transition: transform 1.5s cubic-bezier(0.19, 1, 0.22, 1), filter 0.8s;
+  transition: transform 1.4s cubic-bezier(0.19,1,0.22,1),
+              filter 0.6s;
 }
 
 .gallery-item:hover img {
-  transform: scale(1.1);
+  transform: scale(1.08);
   filter: grayscale(0%);
 }
 
-/* --- OVERLAY --- */
+/* overlay */
 .gallery-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 60%);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 30px;
   opacity: 0;
-  transition: 0.5s ease;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent 60%);
+  transition: 0.5s;
 }
 
 .gallery-item:hover .gallery-overlay {
@@ -157,7 +162,7 @@
 
 .item-cat {
   font-family: 'Plus Jakarta Sans';
-  font-size: 0.6rem;
+  font-size: 0.65rem;
   letter-spacing: 3px;
   color: #2CB2C5;
   font-weight: 800;
@@ -176,70 +181,59 @@
 }
 
 .item-arrow svg {
-  width: 24px;
-  height: 24px;
+  width: 22px;
   color: #D22B7D;
 }
 
-/* --- MOBILE --- */
-@media (max-width: 1024px) {
-  .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .gallery { padding: 100px 20px; }
-  .gallery-header { margin-bottom: 60px; }
-  
-  .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 200px;
-    gap: 15px;
-  }
-
-  /* Reset spans for mobile */
-  .featured, .gallery-item {
-    grid-column: span 1 !important;
-    grid-row: span 1 !important;
-  }
-
-  .gallery-item:nth-child(3n+1) { grid-row: span 2 !important; }
-
-  .gallery-overlay {
-    opacity: 1;
-    background: linear-gradient(transparent, rgba(0,0,0,0.7));
-    padding: 15px;
-  }
-
-  .item-title { font-size: 1rem; }
-}
-/* --- PREVIOUS DESKTOP STYLES (Keep as it is) --- */
-/* --- CLEAN MOBILE --- */
-@media (max-width: 768px) {
+/* --- TABLET --- */
+@media (max-width:1024px) {
 
   .gallery {
-    padding: 60px 15px; /* reduce top bottom space */
+    padding: 120px 30px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2,1fr);
+    grid-auto-rows: 220px;
+    gap: 20px;
+  }
+
+}
+
+/* --- MOBILE (NO WHITE SPACE) --- */
+@media (max-width:768px) {
+
+  .gallery {
+    padding: 60px 15px;
   }
 
   .gallery-header {
-    margin-bottom: 40px; /* reduce gap */
+    margin-bottom: 40px;
+  }
+
+  .gallery-title {
+    font-size: 2rem;
+  }
+
+  .gallery-subtitle {
+    margin-bottom: 25px;
+    font-size: 0.9rem;
   }
 
   .gallery-grid {
     display: flex;
     flex-direction: column;
-    gap: 18px; /* less spacing between images */
+    gap: 18px;
   }
 
   .gallery-item {
     width: 100%;
-    height: 320px; /* reduced height removes white space */
+    height: 320px;
     border-radius: 6px;
   }
 
   .featured {
-    height: 360px; /* slightly bigger than normal */
+    height: 360px;
   }
 
   .gallery-overlay {
@@ -252,14 +246,6 @@
     font-size: 1rem;
   }
 
-  .gallery-title {
-    font-size: 2rem;
-  }
-
-  .gallery-subtitle {
-    margin-bottom: 25px;
-  }
-
   .gallery-cta {
     width: 100%;
     justify-content: center;
@@ -268,15 +254,19 @@
 
 }
 
-/* very small phones */
-@media (max-width: 480px) {
+/* small mobile */
+@media (max-width:480px) {
 
   .gallery-item {
     height: 280px;
   }
 
   .featured {
-    height: 320px;
+    height: 300px;
+  }
+
+  .gallery-title {
+    font-size: 1.7rem;
   }
 
 }
