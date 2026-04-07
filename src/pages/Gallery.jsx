@@ -59,11 +59,10 @@ export default function Gallery() {
               <img src={item.img} alt={item.title} loading="lazy" />
               <div className="gallery-overlay">
                 <div className="overlay-top">
-                  <span className="item-category">{item.category}</span>
                 </div>
                 <div className="overlay-bottom">
                   <h3 className="item-title">{item.title}</h3>
-                  <div className="item-link">Explore Gallery →</div>
+                  <div className="item-link">→</div>
                 </div>
               </div>
             </div>
