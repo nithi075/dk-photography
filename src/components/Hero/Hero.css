@@ -320,32 +320,38 @@
 
     line-height:1.6;
 
-    margin-bottom:28px;
+    margin-bottom:24px;
 
   }
 
   .category-tags{
 
-    font-size:.75rem;
+    font-size:.72rem;
 
-    letter-spacing:1.5px;
+    letter-spacing:1.3px;
 
   }
 
   .hero-actions{
 
-    gap:14px;
+    gap:12px;
 
   }
+
+  /* UPDATED BUTTON SIZE */
 
   .btn-premium,
   .btn-outline{
 
-    padding:14px 20px;
+    padding:12px 18px;
 
-    font-size:.75rem;
+    font-size:.72rem;
 
-    letter-spacing:1px;
+    letter-spacing:.8px;
+
+    border-width:1px;
+
+    min-width:150px;
 
   }
 
@@ -359,13 +365,13 @@
 
   .dot{
 
-    width:30px;
+    width:28px;
 
   }
 
   .active-dot{
 
-    width:40px;
+    width:38px;
 
   }
 
@@ -384,32 +390,48 @@
 
   .hero-content{
 
-    padding:30px 18px;
+    padding:28px 18px;
 
   }
 
   .hero-title{
 
-    font-size:1.9rem;
+    font-size:1.85rem;
 
   }
 
   .hero-description{
 
-    font-size:.88rem;
+    font-size:.85rem;
+
+    margin-bottom:20px;
 
   }
+
+  .hero-actions{
+
+    gap:10px;
+
+  }
+
+  /* compact mobile buttons */
 
   .btn-premium,
   .btn-outline{
 
-    width:100%;
+    padding:11px 16px;
+
+    font-size:.68rem;
+
+    letter-spacing:.6px;
+
+    width:auto;
 
   }
 
   .slide-dots{
 
-    bottom:60px;
+    bottom:55px;
 
   }
 
