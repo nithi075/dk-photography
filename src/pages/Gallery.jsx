@@ -14,7 +14,7 @@ import traditional from "../assets/img8.jpeg";
 import cinematic from "../assets/cinematic.jpeg";
 
 export default function Gallery() {
-  const whatsappNumber = "919659414250"; 
+  const whatsappNumber = "919751478600"; 
   const message = "Hello StudioIn Weddings, I'm looking to book a signature photography session.";
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 

@@ -2,7 +2,7 @@ import "./Contact.css";
 
 export default function Contact() {
 
-  const whatsappNumber = "919659414250";
+  const whatsappNumber = "919751478600";
 
   const message =
     "Hello DK Photography, I'm interested in your services. Can we discuss further?";

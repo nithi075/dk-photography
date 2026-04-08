@@ -1,7 +1,7 @@
 import "./floating.css";
 
 export default function FloatingChat() {
-  const whatsappNumber = "919659414250"; 
+  const whatsappNumber = "919751478600"; 
   const message = "Hello StudioIn Weddings, I'm looking for a premium photography session for our legacy.";
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 

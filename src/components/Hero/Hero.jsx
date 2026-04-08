@@ -10,7 +10,7 @@ export default function Hero() {
     "https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=2070&auto=format&fit=crop"  
   ];
 
-  const whatsappLink = `https://wa.me/919659414250?text=${encodeURIComponent("Hello StudioIn Weddings, I'm interested in booking a cinematic photography session.")}`;
+  const whatsappLink = `https://wa.me/919751478600?text=${encodeURIComponent("Hello StudioIn Weddings, I'm interested in booking a cinematic photography session.")}`;
 
   useEffect(() => {
     const timer = setInterval(() => {
