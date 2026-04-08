@@ -80,7 +80,7 @@ export default function Contact() {
 
               >
 
-                +91 96594 14250
+                +91 97514 78600
 
               </a>
 
