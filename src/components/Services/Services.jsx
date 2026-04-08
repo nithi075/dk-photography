@@ -5,20 +5,20 @@ export default function Services() {
     {
       id: "01",
       title: "Wedding Storytelling",
-      desc: "More than just photos—we capture the nervous smiles, the unscripted tears, and the timeless bond of your union.",
+      desc: "More than just imagery—we archive the silent glances, the unscripted tears, and the soulful bond of your union.",
       tag: "LUXURY WEDDINGS"
     },
     {
       id: "02",
-      title: "Couture Albums",
-      desc: "Handcrafted physical legacies printed on high-grade archival paper, designed to be passed down through generations.",
-      tag: "PRINTED LEGACY"
+      title: "Cinematic Motion",
+      desc: "Narrative-driven wedding films with high-end color grading that transforms your legacy into a silver-screen experience.",
+      tag: "MOTION PICTURE"
     },
     {
       id: "03",
-      title: "Cinematic Films",
-      desc: "Narrative-driven wedding films with high-end color grading that transforms your memories into a silver-screen experience.",
-      tag: "MOTION PICTURE"
+      title: "Couture Archive",
+      desc: "Handcrafted physical legacies printed on high-grade archival paper, designed to breathe life into memories for generations.",
+      tag: "PRINTED LEGACY"
     }
   ];
 
@@ -33,10 +33,10 @@ export default function Services() {
             <div className="tag-dot"></div>
           </div>
           <h2 className="services-title">
-            Bespoke <br/> 
+            Tailored <br/> 
             <span className="title-accent">Visual Artistry</span>
           </h2>
-          <p className="services-subtitle">Crafting unique visual narratives tailored to your extraordinary journey.</p>
+          <p className="services-subtitle">Transforming your extraordinary journey into a timeless cinematic archive.</p>
         </div>
 
         {/* Services List with Interaction */}
@@ -56,17 +56,15 @@ export default function Services() {
               <div className="service-action">
                 <div className="service-circle-btn">
                   <div className="btn-inner">
-                    <span>Details</span>
                     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </div>
                 </div>
               </div>
               
-              {/* Animated Background Line */}
-              <div className="row-bg-line"></div>
-              <div className="hover-reveal-glow"></div>
+              {/* Animated Background Layers */}
+              <div className="row-divider"></div>
             </div>
           ))}
         </div>

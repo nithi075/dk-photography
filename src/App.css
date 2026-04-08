@@ -1,11 +1,25 @@
+/* 1. RESET & BOX-SIZING FIX (Very Important) */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ithu padding-ala width increase aagatha maari pathu peeriya scroll-ah prevent pannum */
+}
+
+:root {
+  --nav-h: 80px;
+  --nav-h-mob: 65px;
+  --black: #080808;
+  --logo-copper: #c88864;
+}
+
 html, body {
   width: 100%;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  overflow-x: hidden; /* Side space-ah force panni remove pannum */
   position: relative;
-  /* Mobile browsers-la horizontal scroll-ai force panni stop panna */
-  max-width: 100vw; 
+  background-color: var(--black);
+  max-width: 100%; /* Changed from 100vw to 100% to avoid scrollbar calculation issues */
 }
 
 #root {
@@ -13,58 +27,79 @@ html, body {
   overflow-x: hidden;
   position: relative;
 }
-/* FIX TOP WHITE SPACE FROM FIXED NAVBAR */
 
-body{
+/* 2. FIX TOP WHITE SPACE FROM FIXED NAVBAR */
+body {
   padding-top: var(--nav-h);
 }
 
-@media(max-width:900px){
-
-  body{
+@media (max-width: 900px) {
+  body {
     padding-top: var(--nav-h-mob);
   }
-
-
 }
-.hero{
-  height:100vh;
-  padding-top:0;
+
+/* 3. SECTION SPECIFIC FIXES */
+.hero {
+  height: calc(100vh - var(--nav-h)); /* Navbar height-ah minus panni exact-ah fit aagum */
+  padding-top: 0;
 }
 
 .services,
 .work,
 .gallery,
-.about{
-
-  padding:140px 40px;
-
+.about,
+.contact {
+  width: 100%;
+  padding: 140px 8%; /* Percentage padding is safer for wide screens */
+  overflow: hidden; /* Row overlap aagatha maari safe-guard */
 }
 
-@media(max-width:768px){
-
-.services,
-.work,
-.gallery,
-.about{
-
-  padding:80px 20px;
-
+/* 4. SECTION GAP ADJUSTMENTS */
+.work {
+  padding-bottom: 60px; /* Reduced to avoid large gaps */
 }
 
-.floating-wrapper{
-
-  bottom:20px;
-
+.contact {
+  padding-top: 60px;
 }
 
-}
-/* FIX SECTION GAP */
+/* 5. MOBILE RESPONSIVE FIXES */
+@media (max-width: 768px) {
+  .services,
+  .work,
+  .gallery,
+  .about,
+  .contact {
+    padding: 80px 20px;
+  }
 
-.work{
-  padding-bottom:100px;
+  .hero {
+    height: calc(100vh - var(--nav-h-mob));
+  }
+
+  .floating-wrapper {
+    bottom: 20px;
+    right: 20px;
+  }
 }
 
-.contact{
-  padding-top:100px;
+/* 6. SCROLLBAR STYLING (Optional - Premium Look) */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--logo-copper);
+  border-radius: 10px;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: #080808; /* prevents white flash */
 }

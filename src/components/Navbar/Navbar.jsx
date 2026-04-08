@@ -1,30 +1,24 @@
 import { useState, useEffect } from "react";
 import "./Navbar.css";
-import logoImg from "../../assets/logo.png"; // Replace with your logo path
+import logoImg from "../../assets/logo.png"; 
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  // Scroll detection logic
+  // Scroll detection
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 40);
+    const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Pro-level Scroll Lock (Prevents navbar/background jump on mobile)
+  // Scroll Lock for Mobile Menu
   useEffect(() => {
     if (menuOpen) {
-      const scrollY = window.pageYOffset;
-      document.body.style.position = "fixed";
-      document.body.style.top = `-${scrollY}px`;
-      document.body.style.width = "100%";
+      document.body.style.overflow = "hidden";
     } else {
-      const scrollY = document.body.style.top;
-      document.body.style.position = "";
-      document.body.style.top = "";
-      window.scrollTo(0, parseInt(scrollY || "0") * -1);
+      document.body.style.overflow = "unset";
     }
   }, [menuOpen]);
 
@@ -36,7 +30,7 @@ export default function Navbar() {
           {/* Logo Section */}
           <a href="#hero" className="nav-brand" onClick={() => setMenuOpen(false)}>
             <div className="logo-holder">
-               <img src={logoImg} alt="StudioIn Weddings" className="brand-logo-img" />
+               <img src={logoImg} alt="Dhilip Kumar Photography" className="brand-logo-img" />
             </div>
           </a>
 
@@ -45,7 +39,7 @@ export default function Navbar() {
             <a href="#hero" className="nav-item">Home</a>
             <a href="#about" className="nav-item">The Studio</a>
             <a href="#work" className="nav-item">Portfolio</a>
-            <a href="#gallery" className="nav-cta">Book Now</a>
+            <a href="#contact" className="nav-cta">Book Now</a>
           </div>
 
           {/* Hamburger Toggle */}
@@ -56,6 +50,7 @@ export default function Navbar() {
           >
             <div className="hamburger">
               <span className="line-t"></span>
+              <span className="line-m"></span>
               <span className="line-b"></span>
             </div>
           </button>
@@ -64,20 +59,20 @@ export default function Navbar() {
 
       {/* Fullscreen Mobile Overlay */}
       <div className={`mobile-overlay ${menuOpen ? "show" : ""}`}>
-        <div className="overlay-bg-text">STUDIOIN</div>
+        <div className="overlay-bg-text">DK</div>
         
         <div className="mobile-links">
           <a href="#hero" style={{ "--i": 1 }} onClick={() => setMenuOpen(false)}>Home</a>
           <a href="#about" style={{ "--i": 2 }} onClick={() => setMenuOpen(false)}>The Studio</a>
           <a href="#work" style={{ "--i": 3 }} onClick={() => setMenuOpen(false)}>Portfolio</a>
-          <a href="#gallery" style={{ "--i": 4 }} className="gradient-link" onClick={() => setMenuOpen(false)}>
-            View Gallery
+          <a href="#contact" style={{ "--i": 4 }} className="gold-link" onClick={() => setMenuOpen(false)}>
+            Book Now
           </a>
         </div>
 
         <div className="mobile-footer">
           <p>TIRUCHIRAPPALLI • TAMIL NADU</p>
-          <div className="social-mini">Instagram • WhatsApp</div>
+          <div className="social-mini">INSTAGRAM • WHATSAPP</div>
         </div>
       </div>
     </>

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./Work.css";
 
-// Assets
+// Assets (Replace with your actual paths)
 import weddingImg from "../../assets/wedding.jpeg";
 import wedding2Img from "../../assets/wedding-2.jpeg";
 import coupleImg from "../../assets/couple.jpeg";
@@ -15,15 +15,15 @@ import cinematicImg from "../../assets/cinematic.jpeg";
 
 export default function Work() {
   const portfolio = [
-    { src: weddingImg, className: "tall", label: "01", category: "Royal Wedding" },
-    { src: portraitImg, className: "wide", label: "02", category: "Fine Art Portrait" },
-    { src: coupleImg, className: "small", label: "03", category: "Eternal Love" },
-    { src: candidImg, className: "medium", label: "04", category: "Pure Emotions" },
+    { src: weddingImg, className: "tall", label: "01", category: "Royal Portraits" },
+    { src: portraitImg, className: "wide", label: "02", category: "Fine Art Series" },
+    { src: coupleImg, className: "small", label: "03", category: "Eternal Bond" },
+    { src: candidImg, className: "medium", label: "04", category: "Raw Emotions" },
     { src: wedding2Img, className: "tall", label: "05", category: "Luxury Cinematic" },
-    { src: receptionImg, className: "wide", label: "06", category: "Grand Reception" },
+    { src: receptionImg, className: "wide", label: "06", category: "Grand Gala" },
     { src: engagementImg, className: "medium", label: "07", category: "The Promise" },
     { src: brideImg, className: "small", label: "08", category: "Bridal Grace" },
-    { src: traditionalImg, className: "tall", label: "09", category: "Heritage Stories" },
+    { src: traditionalImg, className: "tall", label: "09", category: "Heritage Tales" },
     { src: cinematicImg, className: "wide", label: "10", category: "Dream Sequences" },
   ];
 
@@ -34,10 +34,10 @@ export default function Work() {
         <div className="work-header">
           <div className="work-tag-wrapper">
             <div className="tag-line"></div>
-            <span className="work-tag">The Portfolio</span>
+            <span className="work-tag">The Archive</span>
           </div>
-          <h2 className="work-title">Featured <span className="accent-text">Legacies</span></h2>
-          <p className="work-subtitle">Explore a curation of our most soul-stirring frames and cinematic stories.</p>
+          <h2 className="work-title">Captured <span className="accent-text">Legacies</span></h2>
+          <p className="work-subtitle">A curated collection of soul-stirring frames and timeless cinematic stories.</p>
         </div>
 
         <div className="work-grid">
@@ -59,7 +59,7 @@ export default function Work() {
 
         <div className="work-footer">
           <Link to="/gallery" className="btn-premium-work">
-            <span>Explore Entire Archive</span>
+            <span>Explore Full Gallery</span>
             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>

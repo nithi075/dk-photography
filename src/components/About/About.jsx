@@ -7,10 +7,10 @@ export default function About() {
         
         {/* Left Side: Brand Philosophy */}
         <div className="about-header">
-          <span className="about-tag">Mastering the Lens — Since 2018</span>
+          <span className="about-tag">Est. 2018 — The Dhilip Kumar Signature</span>
           <h2 className="about-main-title">
-            We don't just take <span className="accent-italic">photos</span>, <br />
-            we curate your <span className="accent-italic">legacy</span>.
+            Where <span className="accent-italic">Artistry</span> meets <br />
+            your <span className="accent-italic">Authenticity</span>.
           </h2>
         </div>
 
@@ -18,32 +18,34 @@ export default function About() {
         <div className="about-details">
           <div className="about-text-group">
             <p className="about-lead">
-              At StudioIn Weddings, we see the world in frames. Your love story isn't a checklist; 
-              it's a cinematic masterpiece waiting to be told.
+              At DK Photography, we don’t just capture images; we archive emotions. 
+              We believe your legacy isn't written in a book, but in the silent heartbeats 
+              of your most precious moments.
             </p>
             <p className="about-body">
-              Specializing in luxury wedding cinematography and candid portraiture across Tamil Nadu, 
-              our mission is to capture the "in-between" moments—the silent glances, the joyful tears, 
-              and the unscripted laughter that defines who you are.
+              Specializing in premium wedding cinematography across the heritage landscapes of 
+              Tamil Nadu, our lens focuses on the unscripted—the raw, the rare, and the radiant. 
+              Under the creative vision of Dhilip Kumar, we transform your "once-in-a-lifetime" 
+              into a timeless cinematic masterpiece.
             </p>
           </div>
 
           {/* New Grid for Philosophy */}
           <div className="about-stats">
             <div className="stat-item">
-              <span className="stat-num">Authentic</span>
-              <span className="stat-label">No Forced Poses</span>
+              <span className="stat-num">Timeless</span>
+              <span className="stat-label">Beyond Trends</span>
             </div>
             <div className="stat-item">
-              <span className="stat-num">Cinematic</span>
-              <span className="stat-label">High-End Visuals</span>
+              <span className="stat-num">Bespoke</span>
+              <span className="stat-label">Tailored Vision</span>
             </div>
           </div>
 
           <div className="about-footer">
             <div className="signature-line"></div>
             <div className="footer-meta">
-              <span className="signature-text">StudioIn Weddings</span>
+              <span className="signature-text">DK Photography</span>
               <p className="loc-text">Trichy • Madurai • Chennai</p>
             </div>
           </div>
